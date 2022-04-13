@@ -118,7 +118,7 @@ const wordsCount = [
   'disobedience',
   'matter'
 ];
-/*
+
 const count = {};
 
 wordsCount.forEach(Element =>{
@@ -126,7 +126,7 @@ wordsCount.forEach(Element =>{
 });
 
 console.log(count);
-*/
+
 
 
 
