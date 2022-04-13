@@ -1,16 +1,17 @@
 // Iteration #1: Find the maximum
+console.log('<---------iteration 1------->');
 function maxOfTwoNumbers(num1, num2) {
   return Math.max(num1, num2)
 }
 console.log(maxOfTwoNumbers(5, 9));
 
-
+console.log('<------iteration 2--------->');
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-function findLongestWord(words) {
+function findLongestWord(longWord) {
  let tempMax = "";
- for(const currentWord of words){ // for(i=0; i<words.length; i++)
+ for(const currentWord of longWord){ // for(i=0; i<words.length; i++)
   // this is implicit in the for...of sugar syntax -->> currentWord = words[i]
    if(currentWord.length > tempMax.length) tempMax = currentWord
  }
@@ -18,7 +19,7 @@ function findLongestWord(words) {
 }
 console.log(findLongestWord(words));
 
-
+console.log('<------iteration 3--------->');
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
@@ -37,7 +38,7 @@ console.log(sumNumbers(numbers));
 function sum() {}
 
 
-
+console.log('<----------level 1------->')
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
@@ -52,20 +53,21 @@ return sum1  / numbersAvg.length;
 console.log(averageNumbers(numbersAvg));
 
 // Level 2: Array of strings
+console.log('<--------------level 2-------------->');
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength(wordsArr) {
+function averageWordLength(arr) {
   let sum2 = 0;
-for (let i = 0; i < wordsArr.length; i++ ){
-sum2 += wordsArr[i].length;
+for (let i = 0; i < arr.length; i++ ){
+sum2 += arr[i].length;
 }
-return sum2 / wordsArr.length;
+return sum2 / arr.length;
  }
 console.log("averageWordLength", averageWordLength(wordsArr));
-
+console.log('<-----------------level 3-------------->');
 // Bonus - Iteration #4.1
 function avg() {}
-
+console.log('<------iteration 5--------->');
 // Iteration #5: Unique arrays
 const wordsUnique = [
   'crab',
@@ -119,15 +121,16 @@ const wordsCount = [
   'matter'
 ];
 
-const count = {};
+function countRep(arr){
+  const count = {};
 
-wordsCount.forEach(Element =>{
-  count[Element]=(count[Element]|| 0) +1; 
-});
+  arr.forEach(Element =>{
+    count[Element]=(count[Element]|| 0) +1; 
+  });
 
-console.log(count);
-
-
+  return count;
+}
+console.log(countRep(wordsCount));
 
 
 // Iteration #8: Bonus
